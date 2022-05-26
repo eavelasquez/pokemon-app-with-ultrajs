@@ -1,12 +1,16 @@
-# Create Ultra App
+# Ultra Pokemon App
 
 ```sh
-git clone https://github.com/exhibitionist-digital/create-ultra-app
-cd create-ultra-app
+git clone https://github.com/eavelasquez/ultra-pokemon-app
+cd ultra-pokemon-app
 deno task dev
 ```
 
 Requires Deno 1.20.6+
+
+Go to http://localhost:8000/ to see the app.
+
+![ultra-pokemon-app](./docs/ultra-pokemon-app.png)
 
 ### Dev
 
@@ -20,9 +24,6 @@ You can plug this back into Ultra in the `deno.json` config file.
 
 ```javascript
 {
-  "tasks": {
-    // tasks omitted for clarity
-  },
   "importMap": "vendorMap.json" // use either importMap.json or vendorMap.json
 }
 ```
@@ -31,10 +32,8 @@ You can plug this back into Ultra in the `deno.json` config file.
 
 ### Start
 
-`deno task start` will run the server in production mode. Cached ESM imports,
-and no websocket reloader. Uses whichever import map you have defined.
+`deno task start` will run the server in production mode. Cached ESM imports, and no websocket reloader. Uses whichever import map you have defined.
 
 ### Cache
 
-`deno task cache` will refresh the cache for `server.ts`. This can be useful if
-you run into any issues when swapping in between vendored and CDN import maps.
+`deno task cache` will refresh the cache for `server.ts`. This can be useful if you run into any issues when swapping in between vendored and CDN import maps.
