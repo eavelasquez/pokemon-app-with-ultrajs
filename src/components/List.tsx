@@ -2,6 +2,8 @@ import React from "react";
 import useSWR from "swr";
 import { useLocation } from "wouter";
 
+import Alert from "./Alert";
+
 const fetcher = (url: string) => fetch(url).then((response) => response.json());
 
 type Pokemon = {
@@ -42,11 +44,7 @@ const List = () => {
   );
 
   if (error) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        Unable to fetch data from pokemon API
-      </div>
-    );
+    return <Alert message="Unable to fetch data from pokemon API" />;
   }
 
   return (

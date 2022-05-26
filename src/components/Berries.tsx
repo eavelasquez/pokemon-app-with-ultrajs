@@ -1,6 +1,8 @@
 import React from "react";
 import useSWR from "swr";
 
+import Alert from "./Alert";
+
 type BerriesType = {
   name: string;
   url: string;
@@ -26,11 +28,7 @@ const Berries = () => {
   const { data, error } = useSWR(`https://pokeapi.co/api/v2/berry`, fetcher);
 
   if (error) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        Unable to fetch data from pokemon API
-      </div>
-    );
+    return <Alert message="Unable to fetch data from pokemon API" />;
   }
 
   return <div className="list-group">{renderItems(data?.results)}</div>;
