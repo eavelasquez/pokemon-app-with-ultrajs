@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Ultra Pokemon App
+    name: deploy
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Needed for auth with Deno Deploy
@@ -28,6 +28,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "ultra-pokemon-app"
+          project: ultra-pokemon-app
           entrypoint: ULTRA.js
           root: .ultra
