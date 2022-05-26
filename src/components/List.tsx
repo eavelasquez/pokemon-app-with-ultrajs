@@ -23,7 +23,7 @@ const renderItems = (pokemons: Pokemon[], setLocation: SetLocationType) => {
   return pokemons?.map(({ name, url }: Pokemon) => {
     return (
       <div
-        className="card"
+        className="card clickable"
         onClick={() => {
           setLocation(`/pokemon/${getId(url)}`);
         }}
@@ -38,7 +38,7 @@ const renderItems = (pokemons: Pokemon[], setLocation: SetLocationType) => {
 
 const List = () => {
   const [_location, setLocation] = useLocation();
-  const { data, error } = useSWR<Pokemon[]>(
+  const { data, error } = useSWR(
     `https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0`,
     fetcher
   );

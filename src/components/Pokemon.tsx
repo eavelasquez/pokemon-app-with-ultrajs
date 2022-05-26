@@ -22,8 +22,8 @@ const renderMoves = (moves: Array<MovesType>) => {
 
 const Pokemon = ({ name, height, weight, image, moves }: PokemonPropType) => {
   return (
-    <div className="card" style={{ width: "40rem" }}>
-      <img className="card-img-top" src={image} alt={name} />
+    <div className="card" style={{ width: "25rem" }}>
+      <img className="card-img-top pokemon-image" src={image} alt={name} />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <h6 className="card-subtitle mb-2 text-muted">

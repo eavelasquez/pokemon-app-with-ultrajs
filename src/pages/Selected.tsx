@@ -47,9 +47,9 @@ const Selected = ({ params }: SelectedProps) => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-1"></div>
+        <div className="col-md-4"></div>
 
-        <div className="col-md-10">
+        <div className="col-md-4">
           <Pokemon
             name={data?.name}
             height={data?.height}
@@ -60,7 +60,7 @@ const Selected = ({ params }: SelectedProps) => {
           />
         </div>
 
-        <div className="col-md-1"></div>
+        <div className="col-md-4"></div>
       </div>
     </div>
   );
