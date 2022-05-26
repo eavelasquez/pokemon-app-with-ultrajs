@@ -17,7 +17,7 @@ const Ultra = ({ cache }: { cache: Cache }) => {
   return (
     <SWRConfig value={options(cache)}>
       <Helmet>
-        <title>Ultra Pokemon</title>
+        <title>Ultra Pokemon App</title>
         <link rel="stylesheet" href="/style.css" />
       </Helmet>
       <main>
