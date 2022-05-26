@@ -19,19 +19,19 @@ const Home = () => {
       </div>
 
       <div className="row">
-        <div className="col-md-2"></div>
-        <div className="col-md-4">
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
           <Suspense fallback={<div>Loading...</div>}>
             <List />
           </Suspense>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-5">
           <Suspense fallback={<div>Loading...</div>}>
             <Berries />
           </Suspense>
         </div>
-        <div className="col-md-2"></div>
+        <div className="col-md-1"></div>
       </div>
     </div>
   );
