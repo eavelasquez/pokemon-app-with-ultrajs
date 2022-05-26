@@ -1,7 +1,7 @@
 import React from "react";
 import useSWR from "swr";
 
-import Alert from "./Alert";
+import Alert from "./Alert.tsx";
 
 type BerriesType = {
   name: string;

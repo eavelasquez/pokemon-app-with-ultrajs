@@ -2,7 +2,7 @@ import React from "react";
 import useSWR from "swr";
 import { useLocation } from "wouter";
 
-import Alert from "./Alert";
+import Alert from "./Alert.tsx";
 
 const fetcher = (url: string) => fetch(url).then((response) => response.json());
 
