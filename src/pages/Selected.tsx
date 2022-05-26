@@ -1,8 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useSWR from "swr";
 
-import Alert from "../components/Alert.tsx";
-import Pokemon from "../components/Pokemon.tsx";
+import { Alert, Pokemon } from "../components/index.tsx";
 
 const fetcher = (url: string) => fetch(url).then((response) => response.json());
 

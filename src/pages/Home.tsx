@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 
-import List from "../components/List.tsx";
-import Berries from "../components/Berries.tsx";
+import { Berries, List } from "../components/index.tsx";
 
 const Home = () => {
   return (
