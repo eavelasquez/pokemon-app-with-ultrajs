@@ -1,0 +1,33 @@
+name: ultra-pokemon-app deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy Ultra Pokemon App
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Install Deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: 1.20.3
+
+      - name: Build site
+        run: root=https://example.com deno run -A https://deno.land/x/ultra/build.ts
+
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "ultra-pokemon-app"
+          entrypoint: ULTRA.js
+          root: .ultra
